@@ -1,5 +1,12 @@
 # Testing framework for Foam-Extend 4 code
 
+## How to use this repository
+
+- Add it to your repo as a sub-module somewhere under your tests tree
+`git submodule add https://github.com/FoamScience/testingFrameworkFE4 tests/testingFramework`
+
+- Make your test units compile with `testDriver.C` and look in `include` for header files.
+
 ## Design principles
 
 - Tests are created and run with [Catch2 v2.x](https://github.com/catchorg/Catch2/tree/v2.x)
