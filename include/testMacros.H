@@ -83,7 +83,7 @@ fieldClass fieldName \
         IOobject::AUTO_WRITE \
     ), \
     mesh, \
-    dimensionedScalar(#fieldName, dimSet, zero) \
+    dimensioned<fieldClass::cmptType>(#fieldName, dimSet, zero) \
 )
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
