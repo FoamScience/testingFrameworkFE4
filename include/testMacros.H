@@ -71,7 +71,7 @@ meshPtr.reset \
 // Field-related macros
 
 // Create a field from an IOobject, mesh, and initial value
-#define createField(fieldName, fieldClass, time, mesh, dimSet, zero) \
+#define createField(fieldName, fieldClass, time, mesh, dimSet, zero, defaultBC) \
 fieldClass fieldName \
 ( \
     IOobject \
@@ -83,7 +83,8 @@ fieldClass fieldName \
         IOobject::AUTO_WRITE \
     ), \
     mesh, \
-    (#fieldName, dimSet, zero) \
+    (#fieldName, dimSet, zero), \
+    ##defaultBC\
 )
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
