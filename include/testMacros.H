@@ -84,7 +84,7 @@ fieldClass fieldName \
     ), \
     mesh, \
     (#fieldName, dimSet, zero), \
-    ##defaultBC\
+    #defaultBC \
 )
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
