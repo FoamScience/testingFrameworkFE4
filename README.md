@@ -220,6 +220,12 @@ HTML reports from XML files. The recommended configuration is:
 It doesn't support BDD-style tests, so only test cases and sections;
 which Benchmarks if enabled.
 
+After you generate the XML report, run the following command to build
+an HTML webpage:
+```
+xsltproc /path/to/catch2HTML.xslt /path/to/serialTests.xml  > catch2.html
+```
+
 ### Jenkins configuration
 
 0. Make sure Jenkins is running as a user which has access to Foam-Extend
