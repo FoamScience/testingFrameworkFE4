@@ -104,8 +104,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <h1>Test Run: <xsl:value-of select="substring-before(@name, 'TestDriver')"/></h1>
         <p>
                 Executed <b><xsl:value-of select="count(TestCase)"/></b> test cases
-                <b><xsl:value-of select="OverallResults/@successes"/></b> test cases are passing.
-                <b><xsl:value-of select="OverallResults/@failures"/></b> test cases failed.
+                <span style="color:green;"><b><xsl:value-of select="OverallResults/@successes"/></b></span> expressions are passing and
+                <span style="color:red;"><b><xsl:value-of select="OverallResults/@failures"/></b></span> expressions failed.
         </p>
         <xsl:apply-templates/>
 </xsl:template>
