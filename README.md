@@ -2,7 +2,7 @@
 
 ## How to use this repository
 
-- Add it to your repo as a sub-module somewhere under your tests tree
+- Add it to your repo as a submodule somewhere under your tests tree
 `git submodule add https://github.com/FoamScience/testingFrameworkFE4 tests/testingFramework`
 
 - Make your test units compile with `testDriver.C` and look in `include` for header files.
@@ -213,6 +213,12 @@ to `mpirun`, but you can still choose the reporter.
 > This produces parallelTests.xml.1.* files on the caller machine.
 > If you want to run tests on multiple machines, you have to get the files
 > to a central location for reporting.
+
+You can also use: [style/catch2HTML.xslt](style/catch2HTML.xslt) to produce
+HTML reports from XML files. The recommended configuration is:
+`CATCH_SERIAL_OPTIONS="-s -d yes -r xml -o serialTests.xml"`. Currently
+It doesn't support BDD-style tests, so only test cases and sections;
+which Benchmarks if enabled.
 
 ### Jenkins configuration
 
