@@ -1,5 +1,7 @@
 # Testing framework for Foam-Extend 4 code
 
+> :warning: This is deprecated!!! use [FoamScience/OpenFOAM-Unit-testing](https://github.com/FoamScience/OpenFOAM-Unit-testing) instead :warning:
+
 ## How to use this repository
 
 - Add it to your repo as a submodule somewhere under your tests tree
